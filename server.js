@@ -24,9 +24,9 @@ const databaseUri = 'mongodb://localhost:27017/vlibrary';
 
 // mongoose.connect(MONGODB_URI || { useNewUrlParser: true });
 if (process.env.MONGODB_URI) {
-  mongoose.connect(process.env.MONGODB_URI)
+  mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
 } else {
-  mongoose.connect(databaseUri)
+  mongoose.connect(databaseUri, { useNewUrlParser: true })
 };
 
 db.once('error', (err) => {
