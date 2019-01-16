@@ -1,10 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Address from "./pages/Contact";
+import Contact from "./pages/Contact";
 import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
-import Contact from "./pages/Contact";
 
 function App() {
   return (
