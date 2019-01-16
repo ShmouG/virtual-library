@@ -6,7 +6,7 @@ mongoose.connect(
   || 'mongodb://localhost:27017/vlibrary',
 );
 
-const address = [
+const contact = [
   {
     "id": 0,
     "First Name": "Joe",
@@ -19,7 +19,7 @@ const address = [
 
 db.Address
   .remove({})
-  .then(() => db.Address.collection.insertMany(address))
+  .then(() => db.Address.collection.insertMany(contact))
   .then((data) => {
     console.log(`${data.result.n} records inserted!`);
     process.exit(0);

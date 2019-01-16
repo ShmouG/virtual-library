@@ -90,10 +90,10 @@ class Contact extends Component {
                 placeholder="Email (Optional)"
               />
               <Input
-                value={this.state.Contact}
+                value={this.state.Address}
                 onChange={this.handleInputChange}
-                name="Contact"
-                placeholder="Contact (Optional)"
+                name="Address"
+                placeholder="Address (Optional)"
               />
               <FormBtn
                 disabled={!(this.state.First && this.state.Last)}
