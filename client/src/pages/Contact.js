@@ -22,7 +22,7 @@ class Contact extends Component {
   }
 
   loadContact = () => {
-    API.getContact()
+    API.getContacts()
       .then(res =>
         this.setState({ contact: res.data, First: "", Last: "", Phone: "", Email: "",
         Address: "" })

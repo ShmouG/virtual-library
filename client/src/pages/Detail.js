@@ -11,8 +11,8 @@ class Detail extends Component {
   // When this component mounts, grab the address with the _id of this.props.match.params.id
   // e.g. localhost:3000/addresss/599dcb67f0f16317844583fc
   componentDidMount() {
-    API.getAddress(this.props.match.params.id)
-      .then(res => this.setState({ address: res.data }))
+    API.getContact(this.props.match.params.id)
+      .then(res => this.setState({ contact: res.data }))
       .catch(err => console.log(err));
   }
 

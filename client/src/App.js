@@ -12,8 +12,8 @@ function App() {
         <Nav />
         <Switch>
           <Route exact path="/" component={Contact} />
-          <Route exact path="/contacts" component={Contact} />
-          <Route exact path="/contacts/:id" component={Detail} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/contact/:id" component={Detail} />
           <Route component={NoMatch} />
         </Switch>
       </div>
