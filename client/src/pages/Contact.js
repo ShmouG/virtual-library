@@ -9,11 +9,12 @@ import { Input, FormBtn } from "../components/Form";
 
 class Contact extends Component {
   state = {
-    First: [],
+    contacts: [],
+    First: "",
     Last: "",
     Phone: "",
     Email: "",
-    Contact: ""
+    Address: ""
   };
 
   componentDidMount() {
@@ -24,7 +25,7 @@ class Contact extends Component {
     API.getContact()
       .then(res =>
         this.setState({ Contact: res.data, First: "", Last: "", Phone: "", Email: "",
-        Contact: "" })
+        Address: "" })
       )
       .catch(err => console.log(err));
   };
@@ -106,16 +107,16 @@ class Contact extends Component {
             <Jumbotron>
               <h1> Contact List </h1>
             </Jumbotron>
-            {this.state.Contact.length ? (
+            {this.state.contacts.length ? (
               <List>
-                {this.state.Contact.map(Contact => (
-                  <ListItem key={Contact._id}>
-                    <Link to={"/Contact/" + Contact._id}>
+                {this.state.First.map(contact => (
+                  <ListItem key={contact._id}>
+                    <Link to={"/contacts/" + contact._id}>
                       <strong>
-                        {Contact.First} by {Contact.Last}
+                        {contact.First} by {contact.Last}
                       </strong>
                     </Link>
-                    <DeleteBtn onClick={() => this.deleteContact(Contact._id)} />
+                    <DeleteBtn onClick={() => this.deleteContact(contact._id)} />
                   </ListItem>
                 ))}
               </List>
