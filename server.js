@@ -4,6 +4,7 @@ const path = require('path');
 const routes = require('./routes');
 const db = mongoose.connection;
 
+
 const PORT = process.env.PORT || 3001;
 const app = express();
 
@@ -19,11 +20,9 @@ app.use('/', routes, (req, res) => {
   res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
 
-const databaseUri = 'mongodb://localhost/vlibrary';
+const databaseUri = 'mongodb://localhost:27017/vlibrary';
 
-// const MONGODB_URI = process.env.MONGODB_URI;
 // mongoose.connect(MONGODB_URI || { useNewUrlParser: true });
-
 if (process.env.MONGODB_URI) {
   mongoose.connect(process.env.MONGODB_URI)
 } else {
