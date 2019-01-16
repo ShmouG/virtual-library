@@ -24,7 +24,7 @@ class Contact extends Component {
   loadContact = () => {
     API.getContact()
       .then(res =>
-        this.setState({ Contact: res.data, First: "", Last: "", Phone: "", Email: "",
+        this.setState({ contact: res.data, First: "", Last: "", Phone: "", Email: "",
         Address: "" })
       )
       .catch(err => console.log(err));
@@ -49,7 +49,9 @@ class Contact extends Component {
       API.saveContact({
         First: this.state.First,
         Last: this.state.Last,
-        Contact: this.state.Contact
+        Phone: this.state.Phone,
+        Email: this.state.Email,
+        Address: this.state.Address
       })
         .then(res => this.loadContact())
         .catch(err => console.log(err));
