@@ -17,9 +17,9 @@ const contact = [
   }
 ];
 
-db.Address
+db.Contact
   .remove({})
-  .then(() => db.Address.collection.insertMany(contact))
+  .then(() => db.Contact.collection.insertMany(contact))
   .then((data) => {
     console.log(`${data.result.n} records inserted!`);
     process.exit(0);
