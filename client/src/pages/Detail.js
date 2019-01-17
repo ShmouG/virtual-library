@@ -9,7 +9,7 @@ class Detail extends Component {
     contact: {}
   };
   // When this component mounts, grab the address with the _id of this.props.match.params.id
-  // e.g. localhost:3000/addresss/599dcb67f0f16317844583fc
+  // e.g. localhost:3000/address/599dcb67f0f16317844583fc
   componentDidMount() {
     API.getContact(this.props.match.params.id)
       .then(res => this.setState({ contact: res.data }))
@@ -23,7 +23,7 @@ class Detail extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1>
-                {this.state.contact.First} by {this.state.contact.Last}
+                {this.state.contact.First} {this.state.contact.Last}
               </h1>
             </Jumbotron>
           </Col>
@@ -31,16 +31,20 @@ class Detail extends Component {
         <Row>
           <Col size="md-10 md-offset-1">
             <article>
-              <h1>Contact</h1>
+              <h1>Contact Details</h1>
               <p>
-                {this.state.contact.address}
+              <strong>Phone:</strong> {this.state.contact.Phone }
+              <br/>
+              <strong>Email:</strong> {this.state.contact.Email }
+              <br/>
+              <strong>Address:</strong> {this.state.contact.Address}
               </p>
             </article>
           </Col>
         </Row>
         <Row>
           <Col size="md-2">
-            <Link to="/">← Back to Authors</Link>
+            <Link to="/">← Back to Contacts</Link>
           </Col>
         </Row>
       </Container>

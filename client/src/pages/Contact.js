@@ -24,7 +24,7 @@ class Contact extends Component {
   loadContact = () => {
     API.getContacts()
       .then(res =>
-        this.setState({ contact: res.data, First: "", Last: "", Phone: "", Email: "",
+        this.setState({ contacts: res.data, First: "", Last: "", Phone: "", Email: "",
         Address: "" })
       )
       .catch(err => console.log(err));
@@ -64,7 +64,7 @@ class Contact extends Component {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Contact Should I Read?</h1>
+              <h1>Add a contact to your contact list</h1>
             </Jumbotron>
             <form>
               <Input
@@ -111,14 +111,14 @@ class Contact extends Component {
             </Jumbotron>
             {this.state.contacts.length ? (
               <List>
-                {this.state.First.map(contact => (
-                  <ListItem key={contact._id}>
-                    <Link to={"/contacts/" + contact._id}>
+                {this.state.contacts.map(contacts => (
+                  <ListItem key={contacts._id}>
+                    <Link to={"/contact/" + contacts._id}>
                       <strong>
-                        {contact.First} by {contact.Last}
+                        {contacts.First} {contacts.Last}
                       </strong>
                     </Link>
-                    <DeleteBtn onClick={() => this.deleteContact(contact._id)} />
+                    <DeleteBtn onClick={() => this.deleteContact(contacts._id)} />
                   </ListItem>
                 ))}
               </List>

@@ -6,11 +6,11 @@ mongoose.connect(
   || 'mongodb://localhost:27017/vlibrary',
 );
 
-const contact = [
+const contactSeed = [
   {
     "id": 0,
-    "First Name": "Joe",
-    "Last Name": "Devola",
+    "First": "Joe",
+    "Last": "Devola",
     "Phone": "#",
     "Email": "#",
     "Address": "Fantasy Island"
@@ -19,7 +19,7 @@ const contact = [
 
 db.Contact
   .remove({})
-  .then(() => db.Contact.collection.insertMany(contact))
+  .then(() => db.Contact.collection.insertMany(contactSeed))
   .then((data) => {
     console.log(`${data.result.n} records inserted!`);
     process.exit(0);
