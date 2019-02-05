@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, FormBtn } from "../components/Form";
+import './style.css';
+
 
 class Contact extends Component {
   state = {
@@ -64,7 +66,7 @@ class Contact extends Component {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>Add a contact to your contact list</h1>
+              <h1>Add a contact to the contact list</h1>
             </Jumbotron>
             <form>
               <Input
