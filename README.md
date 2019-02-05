@@ -1,10 +1,8 @@
-# Create React Express App
+# React Contact List
 
-## About This Boilerplate
+## About this app
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
-
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+This app uses React and Creat-react-app. It's a phone list that stores user input into the MongoDB. 
 
 ## Starting the app locally
 
@@ -22,8 +20,14 @@ After both installations complete, run the following command in your terminal:
 yarn start
 ```
 
+If you have MongoDB installed on you computer and want to run the database:
+
+```
+Mongod
+```
+
 Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
 
 ## Deployment (Heroku)
 
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+This app is deployed on Heroku. Check it out: https://vast-badlands-48861.herokuapp.com/
