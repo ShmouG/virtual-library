@@ -10,7 +10,10 @@ export default class Auth {
     redirectUri: 'https://vast-badlands-48861.herokuapp.com/callback',
     audience: 'https://shmoug.auth0.com/userinfo',
     responseType: 'token id_token',
-    scope: 'openid'
+    scope: 'openid',
+    auth: {
+        sso: false
+    }   
   });
 
   login = () => {
