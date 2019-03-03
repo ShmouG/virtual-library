@@ -8,7 +8,7 @@ export default class Auth {
     domain: 'shmoug.auth0.com',
     clientID: 'Uht7CL63J166QV7Q1NL6gmau4OLFe4zg',
     redirectUri: 'https://vast-badlands-48861.herokuapp.com/callback',
-    audience: 'https://shmoug.auth0.com/userinfo',
+    // audience: 'https://shmoug.auth0.com/userinfo',
     responseType: 'token id_token',
     scope: 'openid',
     auth: {
