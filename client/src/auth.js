@@ -6,7 +6,7 @@ export default class Auth {
   // Please use your own credentials here
   auth0 = new auth0.WebAuth({
     domain: 'shmoug.auth0.com',
-    clientID: '89xc4wAvrNREmVyi3hd3mqhH4w67N5GH',
+    clientID: 'Uht7CL63J166QV7Q1NL6gmau4OLFe4zg',
     redirectUri: 'https://vast-badlands-48861.herokuapp.com/callback',
     audience: 'https://shmoug.auth0.com/userinfo',
     responseType: 'token id_token',
