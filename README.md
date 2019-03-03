@@ -2,7 +2,7 @@
 
 ## About this app
 
-This app uses React and Creat-react-app. It's a phone list that stores user input into the MongoDB. 
+This app uses React, Create-react-app and Auth0 to authenticate users. It's a phone list that stores user input into the MongoDB. 
 
 ## Starting the app locally
 
